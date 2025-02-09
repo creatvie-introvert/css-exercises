@@ -8,6 +8,7 @@
 
   display: grid;
   grid-template-columns: 1fr 4fr;
+  gap: 4px;
 }
 
 .container div {
@@ -34,7 +35,7 @@
 
 .menu ul {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .menu, .nav {
@@ -44,7 +45,9 @@
 .sidebar {
   background-color: #C50208;
 
-  grid-row: 2 / 4
+  grid-row: 2 / 4;
+  display: grid;
+  gap: 50px;
 }
 
 .sidebar .photo {
@@ -55,12 +58,22 @@
   border-radius: 10px;
 }
 
+.photo {
+  display: grid;
+  align-items: center;
+}
+
 
 .sidebar .side-content {
   background-color: white;
   color: black;
   font-size: 16px;
   font-weight: normal;
+}
+
+.side-content {
+  display: grid;
+  align-items: center;
 }
 
 .nav {
@@ -79,6 +92,9 @@
 
 .article {
   background-color: #bccbde;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .article p {
@@ -86,13 +102,27 @@
   font-family: sans-serif;
   color: white;
   text-align: left;
+  padding: 5px;
 }
 
 .article .card {
   background-color: #FFFFFF;
   color: black;
   text-align: center;
+  height: 200px;
 }
+
+/* .article .card:nth-child(5),
+.article .card:nth-child(6),
+.article .card:nth-child(7),
+.article .card:nth-child(8),
+.article .card:nth-child(9),
+.article .card:nth-child(10),
+.article .card:nth-child(11),
+.article .card:nth-child(12) {
+  grid-column: auto;
+  grid-row: auto;
+} */
 
 .card p {
   color: black;
